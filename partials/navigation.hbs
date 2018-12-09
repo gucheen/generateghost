@@ -1,0 +1,11 @@
+<nav class="main-navigation">
+  <div class="inside-navigation grid-container grid-parent">
+    <ul class="nav-menu">
+      {{#foreach navigation}}
+      <li class="nav-item nav-{{slug}}">
+        <a class="nav-link{{#if current}} nav-current{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
+      </li>
+      {{/foreach}}
+    </ul>
+  </div>
+</nav>

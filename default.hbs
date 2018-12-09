@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{meta_title}}</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  {{ghost_head}}
+</head>
+<body itemtype="https://schema.org/WebPage" itemscope>
+  <header class="site-header" itemtype="https://schema.org/WPHeader" itemscope>
+    <div class="inside-header grid-container grid-parent">
+      <h1 class="site-title">{{@blog.title}}</h1>
+      <h2 class="site-description">{{@blog.description}}</h2>
+    </div>
+  </header>
+  {{navigation}}
+  {{{body}}}
+  <footer class="site-info" itemtype="https://schema.org/WPFooter" itemscope>
+    <div class="inside-site-info grid-container grid-parent">
+      <div id="copyright-bar">
+        <span class="copyright">&copy; {{date format="YYYY"}} {{@blog.title}}</span>
+         • Powered by 
+         <a href="https://ghost.org/" itemprop="url">Ghost</a>
+      </div>
+    </div>
+  </footer>
+  {{ghost_foot}}
+</body>
+</html>
